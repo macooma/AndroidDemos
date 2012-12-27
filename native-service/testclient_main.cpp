@@ -1,7 +1,15 @@
 #include <binder/IServiceManager.h>
 #include <stdio.h>
-#include "ITest.h"
 #include "Test.h"
+#include "TestClient.h"
+
+namespace android {
+
+void TestClient::notifyCallback(int32_t type) {
+    printf("recieve call back %d\n", (int)type);
+}
+
+};
 
 using namespace android;
 
@@ -12,4 +20,6 @@ int main() {
     printf("old value is %d\n", testService->getTest());
     testService->setTest(10);
     printf("new value is %d\n", testService->getTest());
+    sp<TestClient> client = new TestClient();
+    testService->registerClient(client);
 }

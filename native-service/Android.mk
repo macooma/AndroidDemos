@@ -2,7 +2,10 @@ LOCAL_PATH:= $(call my-dir)
 
 include $(CLEAR_VARS)
 
-LOCAL_SRC_FILES:= Test.cpp ITest.cpp
+LOCAL_SRC_FILES:= ITest.cpp Test.cpp ITestClient.cpp
+
+LOCAL_C_INCLUDES := \
+    $(LOCAL_PATH)/include
 
 LOCAL_MODULE:= libnativeservice
 
@@ -19,6 +22,9 @@ include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES:= test_main.cpp
 
+LOCAL_C_INCLUDES := \
+    $(LOCAL_PATH)/include
+
 LOCAL_MODULE:= nativeservice
 
 LOCAL_MODULE_TAGS := optional
@@ -34,6 +40,9 @@ include $(BUILD_EXECUTABLE)
 include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES:= testclient_main.cpp
+
+LOCAL_C_INCLUDES := \
+    $(LOCAL_PATH)/include
 
 LOCAL_MODULE:= nativeservice-client
 

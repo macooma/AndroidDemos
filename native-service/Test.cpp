@@ -9,7 +9,7 @@ namespace android {
 
 // class Test
 Test::Test()
-    :mVal(0){
+    :mVal(0), mClient(NULL){
 }
 
 void Test::instantiate() {
@@ -18,13 +18,22 @@ void Test::instantiate() {
 }
 
 int Test::getTest() {
+    LOGI("%s", __func__);
     LOGI("getTest %d\n", mVal);
     return mVal;
 }
     
 void Test::setTest(int val) {
+    LOGI("%s", __func__);
     mVal = val;
     LOGI("setTest %d\n", mVal);
+}
+
+void Test::registerClient(const sp<ITestClient>& client) {
+    LOGI("%s", __func__);
+    mClient = client;
+    mClient->notifyCallback(1);
+    LOGI("notify 1");
 }
 
 };

@@ -11,8 +11,10 @@ public:
     static void instantiate();
     int getTest();
     void setTest(int val);
+    void registerClient(const sp<ITestClient>& client);
 private:
     int mVal;
+    sp<ITestClient> mClient;
 };
 
 };
