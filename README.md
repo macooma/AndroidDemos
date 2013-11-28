@@ -18,3 +18,4 @@ nativeservice-client将从servicemanager中取出service进行调用。
 
 Dev branch add
 dev commit 1
+dev commit 2
