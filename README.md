@@ -25,3 +25,4 @@ commit 1
 commit 2
 dev commit 1
 dev commit 2
+master commit 5 
