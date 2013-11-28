@@ -23,3 +23,5 @@ Dev branch add
 master commit 4
 commit 1
 commit 2
+dev commit 1
+dev commit 2
