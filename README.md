@@ -17,12 +17,33 @@ nativeservice将把libnativeservice库中定义的service native.service添加�
 nativeservice-client将从servicemanager中取出service进行调用。
 
 master commit 1
+
 master commit 2
+
 master commit 3
+
 Dev branch add
+
 master commit 4
+
 commit 1
+
 commit 2
+
 dev commit 1
+
 dev commit 2
+
 master commit 5 
+
+AndroidDemos network graph 图解释
+---------------------------------
+1. 创建master分支，并进行6次提交。
+
+2. 创建dev及dev2分支。
+
+3. dev执行一次提交后，merge入master分支，然后再执行两次提交后，merge入master分支，删除dev分支。
+
+4. dev2执行两次提交后，merge入master分支，删除dev2分支。
+
+5. dev dev2分支操作过程中，master分支有若干次提交。
