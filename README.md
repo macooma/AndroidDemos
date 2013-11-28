@@ -17,3 +17,4 @@ nativeservice将把libnativeservice库中定义的service native.service添加�
 nativeservice-client将从servicemanager中取出service进行调用。
 
 Dev branch add
+dev commit 1
