@@ -15,3 +15,5 @@ adb push nativeservice-client /system/bin
 
 nativeservice将把libnativeservice库中定义的service native.service添加到servicemanager，
 nativeservice-client将从servicemanager中取出service进行调用。
+
+master commit 1
